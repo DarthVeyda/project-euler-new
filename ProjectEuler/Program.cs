@@ -84,7 +84,7 @@ namespace ProjectEuler
             Console.WriteLine(problem22.SolutionOutput());
             */
 
-            Problem23 problem23 = new Problem23(23, 28123,
+            Problem23 problem23 = new Problem23(23, 20161,
                 "The sum of all the positive integers which cannot be written as the sum of two abundant numbers is {1}");
             Console.WriteLine(problem23.SolutionOutput());
 

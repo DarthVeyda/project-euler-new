@@ -212,12 +212,23 @@ namespace ProjectEuler
              *then the number of its positive divisors equals to
              *(a1 + 1) * (a2 + 1) * … * (an + 1) 
              */
-            //TODO - test; the values for 6 and 15 were incorrect(?)
             return
                 GetPrimeFactors(Number)
                     .GroupBy(factor => factor)
                     .Select(factor => factor.Count())
                     .Aggregate<int, long>(1, (current, count) => current*(count + 1));
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="number"></param>
+        /// <param name="output"></param>
+        /// <returns></returns>
+        public static bool MersennePrime(long number, out long output)
+        {
+            output = Convert.ToInt64(Math.Pow(2, number)) - 1; //TODO - possible overflow!
+            return IsPrime(output);
         }
 
         /// <summary>

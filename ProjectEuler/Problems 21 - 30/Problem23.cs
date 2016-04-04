@@ -17,7 +17,8 @@ namespace ProjectEuler
          * 
          * As 12 is the smallest abundant number, 1 + 2 + 3 + 4 + 6 = 16, the smallest number 
          * that can be written as the sum of two abundant numbers is 24. By mathematical analysis, 
-         * it can be shown that all integers greater than 28123 can be written as the sum of 
+         * it can be shown that all integers greater than 28123 (actually 20161, see 
+         * https://en.wikipedia.org/wiki/Abundant_number#Properties) can be written as the sum of 
          * two abundant numbers. However, this upper limit cannot be reduced any further by analysis 
          * even though it is known that the greatest number that cannot be expressed as the sum of 
          * two abundant numbers is less than this limit.
@@ -32,7 +33,25 @@ namespace ProjectEuler
 
         protected override long Solve()
         {
-            throw new NotImplementedException();
+            List<int> result = Enumerable.Range(1, (int)InputParam).ToList();
+            List<int> abundants = new List<int>();
+            for (int number = 12; number <= InputParam; number++)
+            {
+                var divisors = CommonFunctions.SmarterGetAllFactors(number);
+                divisors.Remove(number);
+                if (number < divisors.Sum())
+                {
+                    abundants.Add(number);
+                }
+            }
+            foreach (var abundant in abundants)
+            {
+                foreach (var i in abundants)
+                {
+                    result.Remove(abundant + i);
+                }
+            }
+            return result.Sum();
         }
     }
 }
