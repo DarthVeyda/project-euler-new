@@ -86,11 +86,15 @@ namespace ProjectEuler
             Problem23 problem23 = new Problem23(23, 20161,
                 "The sum of all the positive integers which cannot be written as the sum of two abundant numbers is {1}");
             Console.WriteLine(problem23.SolutionOutput());            
-             */
 
             Problem24 problem24 = new Problem24(24, 1000000,
                 "The {0}th lexicographic permutation of the digits 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9 is {1}");
-            Console.WriteLine(problem24.SolutionOutput());
+            Console.WriteLine(problem24.SolutionOutput());             
+             */
+
+            Problem25 problem25 = new Problem25(25, 1000,
+                "The index of the first term in the Fibonacci sequence to contain {0} digits is {1}");
+            Console.WriteLine(problem25.SolutionOutput());
             Console.ReadLine();
 
         }

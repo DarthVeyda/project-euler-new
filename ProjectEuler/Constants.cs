@@ -8,6 +8,11 @@ namespace ProjectEuler
 {
     internal static class Constants
     {
+        //Fibonacci numbers - constants for Binet formula
+
+        public static readonly double Phi = (1 + Math.Sqrt(5)) / 2;
+        public static readonly double phi = (1 - Math.Sqrt(5)) / 2;
+
         //coefficients for Gamma function approximation (table constants)
         public static readonly double[] CoeffsApprox = 
         {
