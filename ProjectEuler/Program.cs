@@ -82,12 +82,15 @@ namespace ProjectEuler
 
             Problem22 problem22 = new Problem22(22, -1, "The total of all the name scores in the file is {1}");
             Console.WriteLine(problem22.SolutionOutput());
-            */
 
             Problem23 problem23 = new Problem23(23, 20161,
                 "The sum of all the positive integers which cannot be written as the sum of two abundant numbers is {1}");
-            Console.WriteLine(problem23.SolutionOutput());
+            Console.WriteLine(problem23.SolutionOutput());            
+             */
 
+            Problem24 problem24 = new Problem24(24, 1000000,
+                "The {0}th lexicographic permutation of the digits 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9 is {1}");
+            Console.WriteLine(problem24.SolutionOutput());
             Console.ReadLine();
 
         }
