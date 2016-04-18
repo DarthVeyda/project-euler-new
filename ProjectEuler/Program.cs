@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics.Contracts;
+using System.Linq;
 
 namespace ProjectEuler
 {
@@ -90,13 +93,18 @@ namespace ProjectEuler
             Problem24 problem24 = new Problem24(24, 1000000,
                 "The {0}th lexicographic permutation of the digits 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9 is {1}");
             Console.WriteLine(problem24.SolutionOutput());             
-             */
 
             Problem25 problem25 = new Problem25(25, 1000,
                 "The index of the first term in the Fibonacci sequence to contain {0} digits is {1}");
-            Console.WriteLine(problem25.SolutionOutput());
-            Console.ReadLine();
+            Console.WriteLine(problem25.SolutionOutput());             
+              
+             */
 
+            Problem26 problem26 = new Problem26(26, 1000,
+                "the value of d < {0} for which 1/d contains the longest recurring cycle in its decimal fraction part is {1}");
+            Console.WriteLine(problem26.SolutionOutput());
+            Console.ReadLine();
         }
+
     }
 }
