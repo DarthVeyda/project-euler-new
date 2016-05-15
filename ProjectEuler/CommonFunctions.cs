@@ -53,7 +53,7 @@ namespace ProjectEuler
         public static bool IsPrime(long Number)
         {
             bool isPrime = true;
-            if ((Number == 0) || (Number == 1)) return false;
+            if (Number <= 1) return false;
             if ((Number == 2) || (Number == 3)) return true;
 
             #region Baillie - PSW primality test
