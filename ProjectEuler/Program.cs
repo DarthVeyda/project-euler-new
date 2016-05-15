@@ -97,12 +97,18 @@ namespace ProjectEuler
             Problem25 problem25 = new Problem25(25, 1000,
                 "The index of the first term in the Fibonacci sequence to contain {0} digits is {1}");
             Console.WriteLine(problem25.SolutionOutput());             
-              
-             */
 
             Problem26 problem26 = new Problem26(26, 1000,
                 "the value of d < {0} for which 1/d contains the longest recurring cycle in its decimal fraction part is {1}");
             Console.WriteLine(problem26.SolutionOutput());
+                          
+             */
+
+            Problem27 problem27 = new Problem27(27, 1000,
+                @"The product of the coefficients, a and b, for the quadratic expression n² + an + b 
+                that produces the maximum number of primes for consecutive values of n, 
+                starting with n = 0, and for |a|<{0}, |b|<{0} is {1}");
+            Console.WriteLine(problem27.SolutionOutput());
             Console.ReadLine();
         }
 
