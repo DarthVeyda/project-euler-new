@@ -101,14 +101,16 @@ namespace ProjectEuler
             Problem26 problem26 = new Problem26(26, 1000,
                 "the value of d < {0} for which 1/d contains the longest recurring cycle in its decimal fraction part is {1}");
             Console.WriteLine(problem26.SolutionOutput());
-                          
-             */
-
+             * 
             Problem27 problem27 = new Problem27(27, 1000,
                 @"The product of the coefficients, a and b, for the quadratic expression n² + an + b 
                 that produces the maximum number of primes for consecutive values of n, 
                 starting with n = 0, and for |a|<{0}, |b|<{0} is {1}");
-            Console.WriteLine(problem27.SolutionOutput());
+            Console.WriteLine(problem27.SolutionOutput());                          
+             */
+
+            Problem28 problem28 = new Problem28(28, 1001, "The sum of the numbers on the diagonals in a {0} by {0} spiral is {1}");
+            Console.WriteLine(problem28.SolutionOutput());
             Console.ReadLine();
         }
 
