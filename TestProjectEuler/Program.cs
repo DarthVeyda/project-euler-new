@@ -73,6 +73,22 @@ namespace TestProjectEuler
         }
     }
 
+    [TestFixture]
+    public class PrimesTest
+    {
+        [Test]
+        public void Is1601Prime()
+        {
+            Assert.AreEqual(true,CommonFunctions.IsPrime(1601));
+        }
+
+        [Test]
+        public void Is1Prime()
+        {
+            Assert.AreEqual(false, CommonFunctions.IsPrime(1));
+        }
+    }
+
     //[TestFixture]
     //public class AllIndexOfTest
     //{
