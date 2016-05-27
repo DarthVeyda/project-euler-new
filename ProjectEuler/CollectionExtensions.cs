@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProjectEuler
 {
@@ -67,6 +64,14 @@ namespace ProjectEuler
             }
             return true;
         }
+        public static IEnumerable<int> Digits(this int number)
+        {
+            do
+            {
+                yield return number % 10;
+                number /= 10;
+            } while (number > 0);
+        }
     }
 
     internal class ListComparer : IEqualityComparer<List<long>>
@@ -84,9 +89,5 @@ namespace ProjectEuler
                 return obj.Aggregate(17, (current, element) => current * 23 + element.GetHashCode());
             }
         }
-    }
-
-    class CollectionExtensions
-    {
     }
 }

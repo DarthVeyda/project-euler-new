@@ -89,28 +89,15 @@ namespace TestProjectEuler
         }
     }
 
-    //[TestFixture]
-    //public class AllIndexOfTest
-    //{
-    //    [Test]
-    //    public void SeveralOccurencesTest()
-    //    {
-    //        Assert.AreEqual(new List<int> { 3, 5, 8 }, Problem26.AllIndexOf("32243439438221", "43"));
-    //    }
-
-    //    [Test]
-    //    public void SingleOccurencesTest()
-    //    {
-    //        Assert.AreEqual(new List<int> { 9 }, Problem26.AllIndexOf("32243439438221", "382"));
-    //    }
-
-    //    [Test]
-    //    public void NoOccurencesTest()
-    //    {
-    //        Assert.AreEqual(new List<int>(), Problem26.AllIndexOf("32243439438221", "7"));
-    //    }
-    //}
-
+    [TestFixture]
+    public class DigitsSumTest
+    {
+        [Test]
+        public void Digits9_6Test()
+        {
+            Assert.AreEqual(354294, ExtensionMethods.Digits(999999).Aggregate(0,(current, next) => current + (int)Math.Pow(next, 5)));
+        }
+    }
     [TestFixture]
     public class ShiftStringTest
     {
