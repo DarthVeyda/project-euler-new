@@ -31,7 +31,7 @@ namespace ProjectEuler
             for (int step = 1; step <= stepsTotal; step++)
             {
                 var last = tmpSeq.Last();
-                for (int mult = 1; mult <= 4; mult++)
+                for (int mult = 1; mult <= 4; mult++) // four corners of each turn of the spiral
                     tmpSeq.Add(last + mult * 2 * step);
             }
             return tmpSeq.Sum();
